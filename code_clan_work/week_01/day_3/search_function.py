@@ -15,10 +15,8 @@ for chicken in chickens:
 		num_eggs_henrietta = chicken["eggs"]
 print(num_eggs_henrietta)
 
-audrey_found = False
+result = "Audrey not found!"
 for chicken in chickens:
 	if chicken["name"] == "Audrey":
-		print(chicken)
-		audrey_found = True
-if audrey_found == False:
-	print("Audrey wasn't found!")
+		result = chicken
+print(result)
