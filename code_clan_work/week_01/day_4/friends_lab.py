@@ -103,13 +103,35 @@ print(likes_to_eat(person3, "spinach"))
 # INPUT: person2, "Scrappy-Doo"
 # OUTPUT: None
 # Test your function by calling it and then printing our person2's list of friends
+def add_friend(person, new_friend):
+	for pers in people:
+		if pers == person:
+			pers["friends"].append(new_friend)
 
+add_friend(person2, "Scrappy-Doo")
+for pers in people:
+	if pers == person2:
+		print(pers["friends"])
 
 # 5. Define a function called remove_friend(person, old_friend) that removes a friend from the person's list of friends
 # INPUT: person2, "Fred"
 # OUTPUT: None
 # Test your function by calling it and then printing our person2's list of friends
+def remove_friend(person, old_friend):
+	
+	for pers in people:
+		if pers == person:
+			index = 0
+			for friend in pers["friends"]:
+				if friend == old_friend:
+					index_of_old_friend = index
+				index += 1
+			del pers["friends"][index_of_old_friend]
 
+remove_friend(person2,"Fred")
+for pers in people:
+	if pers == person2:
+		print(pers["friends"])
 
 # 6. Define a function called total_money(people) that returns the total of everyone's money
 # INPUT: people
