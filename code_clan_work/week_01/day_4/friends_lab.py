@@ -136,27 +136,68 @@ for pers in people:
 # 6. Define a function called total_money(people) that returns the total of everyone's money
 # INPUT: people
 # OUTPUT: 143
+def total_money(people):
+	total = 0
+	for pers in people:
+		total += pers["monies"]
+	return total
 
+print(total_money(people))
 
 # 7. Define a function called lend_money(lender, borrower, amount) that removes a given amount from the lender and adds it to the borrower
 # INPUT: person2, person1, 2
 # OUTPUT: None
 # Test your function by calling it and then printing out person1's and person2's monies
+def lend_money(lender, borrower, amount):
+	for pers in people:
+		if pers == lender:
+			pers["monies"] -= amount
+	for pers in people:
+		if pers == borrower:
+			pers["monies"] += amount
+
+lend_money(person2, person1, 2)
+for pers in people:
+	if pers == person2 or pers == person1:
+		print (pers["monies"])
+
 
 
 # 8. Define a function called all_favourite_foods(people) that returns a list of everyone's favourite food.
 # INPUT: people
 # OUTPUT: ["charcuterie", "soup", "bread", "Scooby snacks", "spaghetti", "ratatouille", "spinach"]
+def all_favourite_foods(people):
+	list_of_favourites = []
+	for pers in people:
+		for item in pers["favourites"]["snacks"]:
+			list_of_favourites.append(item)
+	return list_of_favourites
 
+print(all_favourite_foods(people))
 
 # 9. Define a function called find_no_friends(people) that returns a list of all the people that have a friends list of length 0.
 # INPUT: people
 # OUTPUT: [{'name': 'Daphne', 'age': 20, 'monies': 100, 'friends': [], 'favourites': {'tv_show': 'X-Files', 'snacks': ['spinach']}}]
+def find_no_friends(people):
+	friendless_people = []
+	for pers in people:
+		if len(pers["friends"]) == 0:
+			friendless_people.append(pers)
+	return friendless_people
 
+print(find_no_friends(people))
 
 # 10. Define a function called unique_favourite_tv_shows(people) that returns a list of all the tv_shows (without duplicates).
 # INPUT: people
 # OUTPUT: ['Friends', 'Baywatch', 'Pokemon', 'X-Files']
+def unique_favourite_tv_show(people):
+	duplicate_free_list_of_tv_shows = []
+	for pers in people:
+		tv_show = pers["favourites"]["tv_show"]
+		if tv_show not in duplicate_free_list_of_tv_shows:
+			duplicate_free_list_of_tv_shows.append(tv_show)
+	return duplicate_free_list_of_tv_shows
 
+print(unique_favourite_tv_show(people))
 
 # BONUS: Try to refactor the previous function to use Python's built-in set() function.
