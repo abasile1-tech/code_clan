@@ -235,7 +235,7 @@ def fahrenheit_to_celsius(fahrenheit):
 	takes a parameter fahrenheit
 	returns the result of converting fahrenheit to celcius (rounded to 2 decimal places)
 	"""
-	return 5/9 * (fahrenheit - 32)
+	return round(5/9 * (fahrenheit - 32),2)
 
 print("------------------------------")
 print("By converting 0 fahrenheit to celcius, I'm expecting it to be -17.78, and the result is")
