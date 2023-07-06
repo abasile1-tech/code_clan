@@ -201,3 +201,10 @@ def unique_favourite_tv_show(people):
 print(unique_favourite_tv_show(people))
 
 # BONUS: Try to refactor the previous function to use Python's built-in set() function.
+def unique_favourite_tv_show_refactored(people):
+	set_of_tv_shows = set()
+	for pers in people: 
+		set_of_tv_shows.add(pers["favourites"]["tv_show"])
+	return set_of_tv_shows
+
+print(unique_favourite_tv_show_refactored(people))
