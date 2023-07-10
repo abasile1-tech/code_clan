@@ -11,3 +11,6 @@ print(account2.get_balance())
 
 account.pay_in(50)
 print(account.get_balance())
+
+account.pay_monthly_fee()
+print(account.get_balance())

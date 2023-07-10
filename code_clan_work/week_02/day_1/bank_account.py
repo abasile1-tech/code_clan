@@ -21,3 +21,11 @@ class BankAccount():
 	def pay_in(self, amount):
 		current_balance = self.get_balance()
 		self.set_balance(current_balance + amount)
+
+	def pay_monthly_fee(self):
+		current_balance = self.get_balance()
+		if self.get_account_type() == "business":
+			amount = 100
+		elif self.get_account_type() == "personal":
+			amount = 50
+		self.set_balance(current_balance - amount)
