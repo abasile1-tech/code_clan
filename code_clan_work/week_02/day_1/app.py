@@ -14,3 +14,6 @@ print(account.get_balance())
 
 account.pay_monthly_fee()
 print(account.get_balance())
+
+account2.pay_monthly_fee()
+print(account2.get_balance())

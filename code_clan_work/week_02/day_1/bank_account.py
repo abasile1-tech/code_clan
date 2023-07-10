@@ -3,6 +3,11 @@ class BankAccount():
 		self.holder_name = holder_name
 		self.balance = balance
 		self.account_type = account_type
+		self.rates = {
+			"personal": 50,
+			"business": 100,
+			"charity": 0
+		}
 
 	def get_holder_name(self):
 		return self.holder_name
@@ -24,8 +29,5 @@ class BankAccount():
 
 	def pay_monthly_fee(self):
 		current_balance = self.get_balance()
-		if self.get_account_type() == "business":
-			amount = 100
-		elif self.get_account_type() == "personal":
-			amount = 50
+		amount = self.rates[self.get_account_type()]
 		self.set_balance(current_balance - amount)
