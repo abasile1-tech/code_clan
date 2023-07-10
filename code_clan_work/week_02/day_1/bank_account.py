@@ -17,3 +17,7 @@ class BankAccount():
 		self.balance = balance
 	def set_account_type(self, account_type):
 		self.account_type = account_type
+
+	def pay_in(self, amount):
+		current_balance = self.get_balance()
+		self.set_balance(current_balance + amount)
