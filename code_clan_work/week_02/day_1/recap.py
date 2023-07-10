@@ -61,9 +61,20 @@ remove_duplicates([0,0,5,5,6,6,7,8,9,9])
 Exercise 7:
 Write a program that prompts the user to enter a sentence and prints the sentence in reverse order.
 """
-
+def reverse_sentence():
+	sentence = input("Please enter a sentence: ")
+	print(sentence[::-1])
+# reverse_sentence()
 """
 BONUS CHALLENGE!
 Write a program that prompts the user to enter a sentence and counts the frequency of each word in the sentence using a dictionary.
 HINT: Python's split() method will turn a set into a List
 """
+def count_word_frequency():
+	sentence = input("Please enter a sentence: ")
+	list_of_words = sentence.split()
+	word_frequency = {}
+	for word in list_of_words:
+		word_frequency[word] = len(word)
+	return word_frequency
+print(count_word_frequency())
