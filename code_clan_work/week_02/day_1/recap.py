@@ -54,7 +54,9 @@ Exercise 6:
 Write a program that takes a list of integers and removes all the duplicates, printing the updated list.
 HINT: Python's in-built set function will remove duplicates from a list
 """
-
+def remove_duplicates(integers):
+	print(set(integers))
+remove_duplicates([0,0,5,5,6,6,7,8,9,9])
 """
 Exercise 7:
 Write a program that prompts the user to enter a sentence and prints the sentence in reverse order.
