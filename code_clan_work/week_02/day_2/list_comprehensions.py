@@ -7,3 +7,15 @@ print([number for number in numbers if number % 2 == 0])
 # ["Odd","Even","Odd"]
 
 print(["Even" if number % 2 == 0 else "Odd" for number in numbers])
+
+adjectives = ["Jolly", "Damp", "Cheeky"]
+animals = ["Koala", "Snail", "Axolotl"]
+
+usernames = []
+for adjective in adjectives:
+	for animal in animals:
+		usernames.append(f"{adjective} {animal}")
+
+print(usernames)
+
+print([f"{adjective} {animal}" for adjective in adjectives for animal in animals])
