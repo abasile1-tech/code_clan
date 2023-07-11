@@ -38,5 +38,5 @@ words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
 # Hint: Strings in Python work as if they were a tuple full of characters. 
 # How would you get the first element from a tuple or list?
 def get_first_letter(words):
-	return[word[0].lower() for word in words if word[0]]
+	return[word[0].lower() for word in words]
 print(get_first_letter(words))
