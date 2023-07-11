@@ -1,12 +1,19 @@
 # Exercise 1
 # Using single list comprehension, and the following list:
-# ages = [5, 15, 64, 27, 84, 26]
+ages = [5, 15, 64, 27, 84, 26]
 # Return a list of only the odd ages.
+def get_odd_ages(ages):
+	return[age for age in ages if age % 2 != 0]
+print(get_odd_ages(ages))
+
 # Exercise 2
 # Using single list comprehension, and the following list:
 # years = range(2000, 2100)
 # Return a list of the leap years in this century.
-# Hint: A leap year is one that can be exactly divided by 4 (such as 2016, 2020, 2024, etc), except if it can be exactly divided by 100.
+# Hint: A leap year is one that can be exactly divided by 4 (such as 2016, 2020, 2024, etc), 
+# except if it can be exactly divided by 100.
+
+
 # Exercise 3
 # Using single list comprehension, and the following list:
 # chicken_names = ["Hen Solo", "Cluck Norris", "Hennifer Lopez", "ChewPekka", "Feather Locklear"]
