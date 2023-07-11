@@ -18,9 +18,17 @@ print(get_leap_years(years))
 
 # Exercise 3
 # Using single list comprehension, and the following list:
-# chicken_names = ["Hen Solo", "Cluck Norris", "Hennifer Lopez", "ChewPekka", "Feather Locklear"]
+chicken_names = ["Hen Solo", "Cluck Norris", "Hennifer Lopez", "ChewPekka", "Feather Locklear"]
 # Return a list with chickens whose name is more than 10 characters
 # Return a list of chickens whose name starts with the letter H
+def get_long_names(names):
+	return [name for name in names if len(name) > 10]
+
+def get_h_names(names):
+	return [name for name in names if name[0] == "H"]
+print(get_long_names(chicken_names))
+print(get_h_names(chicken_names))
+
 # Exercise 4
 # Using a single list comprehension, and the following list:
 # words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
