@@ -31,8 +31,12 @@ print(get_h_names(chicken_names))
 
 # Exercise 4
 # Using a single list comprehension, and the following list:
-# words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
+words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
 # Build a new list, with the first letter from each word
 # Convert each letter to lower case
 # Expected output: ["t", "q", "b", "f", "j", "o", "t", "l", "d"]
-# Hint: Strings in Python work as if they were a tuple full of characters. How would you get the first element from a tuple or list?
+# Hint: Strings in Python work as if they were a tuple full of characters. 
+# How would you get the first element from a tuple or list?
+def get_first_letter(words):
+	return[word[0].lower() for word in words if word[0]]
+print(get_first_letter(words))
