@@ -8,11 +8,13 @@ print(get_odd_ages(ages))
 
 # Exercise 2
 # Using single list comprehension, and the following list:
-# years = range(2000, 2100)
+years = range(2000, 2100)
 # Return a list of the leap years in this century.
 # Hint: A leap year is one that can be exactly divided by 4 (such as 2016, 2020, 2024, etc), 
 # except if it can be exactly divided by 100.
-
+def get_leap_years(years):
+	return [year for year in years if year % 4 == 0 and year % 100 != 0]
+print(get_leap_years(years))
 
 # Exercise 3
 # Using single list comprehension, and the following list:
